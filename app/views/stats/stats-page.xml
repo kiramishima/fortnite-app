@@ -1,4 +1,4 @@
-<Page class="stats_page"
+<Page class="{{ bgclass }}"
     navigatingTo="onNavigatingTo" 
     xmlns="http://schemas.nativescript.org/tns.xsd">
     

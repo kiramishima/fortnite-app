@@ -5,6 +5,7 @@ import { StatsViewModel } from "./stats-view-model";
 export function onNavigatingTo(args: NavigatedData) {
     const page = <Page>args.object;
     page.actionBarHidden = true;
+    
     const { player } = page.navigationContext;
     console.log({player});
     if (player == "") {
@@ -12,6 +13,7 @@ export function onNavigatingTo(args: NavigatedData) {
     } else {
         const ctx = new StatsViewModel(player);
         ctx.getUserStats();
+        ctx.setBackgroundClass();
         page.bindingContext = ctx;
     }
 }
