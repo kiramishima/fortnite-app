@@ -18,3 +18,29 @@ components that have the btn class name.
 .btn {
     font-size: 18;
 }
+
+.img_logo {
+    width: 280;
+    height: 280;
+}
+
+.search_input {
+    border-radius: 15;
+    border-color: #A9A9A9;
+    border-width: 2;
+    margin-top: 50;
+    margin-right: 30;
+    margin-left: 30;
+    padding-left: 10;
+    
+}
+
+StackLayout {
+    margin-top: 100;
+}
+
+.stats_page {
+    background-image: url("~/images/tomatohead.png");
+    background-position: right bottom; /*Positioning*/
+    background-repeat: no-repeat; /*Prevent showing multiple background images*/
+}

@@ -1,0 +1,22 @@
+<Page class="page"
+    navigatingTo="onNavigatingTo" 
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+    
+    <ActionBar class="action-bar">
+        <Label class="action-bar-title" text="Home"></Label>
+    </ActionBar>
+
+    <StackLayout>
+    
+        <Image src="~/images/fortnite_llama_logo.jpg" class="img_logo" />
+        <TextField hint='Ninja' 
+            text='{{ txtSearch }}' 
+            secure="false"
+            returnKeyType="search" 
+            returnPress="{{ onReturnPress }}" 
+            autocorrect="false"
+            focus="{{ onFocus }}" 
+            blur="{{ onBlur }}" 
+            class="search_input"/>
+    </StackLayout>
+</Page>

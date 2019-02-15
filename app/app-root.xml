@@ -1,1 +1,1 @@
-<Frame defaultPage="home/home-page"></Frame>
+<Frame id="main" defaultPage="views/home/home-page"></Frame>
