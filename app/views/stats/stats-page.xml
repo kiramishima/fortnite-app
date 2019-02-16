@@ -1,12 +1,54 @@
 <Page class="{{ bgclass }}"
     navigatingTo="onNavigatingTo" 
     xmlns="http://schemas.nativescript.org/tns.xsd">
-    
-    <ActionBar class="action-bar">
-        <Label class="action-bar-title" text="Stats"></Label>
-    </ActionBar>
+    <ScrollView>
+        <StackLayout class="stacklayout_stats_page">
+            <Label text="Ninja" class="user_name" textWrap="true" />
+            <GridLayout columns="120, *" rows="auto, auto" backgroundColor="lightgray">
+                <Label text="Epic ID" textWrap="true" class="info_label" col="0" row="0" backgroundColor="red" />
+                <Label text="4735ce9132924caf8a5b17789b40f79c" textWrap="true" class="info_value" col="1" row="0" backgroundColor="blue" />
+                <Label text="Platform" col="0" row="1" class="info_label" backgroundColor="green" />
+                <Label text="PC, Xbox, PS4, NSwitch" col="1" row="1" class="info_value" backgroundColor="yellow" />
+            </GridLayout>
 
-    <GridLayout>
-        <!-- Add your page content here -->
-    </GridLayout>
+            <GridLayout columns="auto,*,auto,*,auto,*" rows="*">
+                <Label text="Kills" class="info_label" col="0" row="0" />
+                <Label text="98680" class="info_value" col="1" row="0" textWrap="true" />
+                <Label text="Wins" class="info_label" col="2" row="0" textWrap="true" />
+                <Label text="98680" class="info_value" col="3" row="0" textWrap="true" />
+                <Label text="KD" class="info_label" col="4" row="0" textWrap="true" />
+                <Label text="98680" class="info_value" col="5" row="0" textWrap="true" />
+            </GridLayout>
+
+            <GridLayout columns="120, *" rows="auto, auto" backgroundColor="lightgray">
+                <Label text="Epic ID" textWrap="true" class="info_label" col="0" row="0" backgroundColor="red" />
+                <Label text="4735ce9132924caf8a5b17789b40f79c" textWrap="true" class="info_value" col="1" row="0" backgroundColor="blue" />
+                <Label text="Platform" col="0" row="1" class="info_label" backgroundColor="green" />
+                <Label text="PC, Xbox, PS4, NSwitch" col="1" row="1" class="info_value" backgroundColor="yellow" />
+            </GridLayout>
+
+            <GridLayout columns="120, *" rows="auto, auto" backgroundColor="lightgray">
+                <Label text="Epic ID" textWrap="true" class="info_label" col="0" row="0" backgroundColor="red" />
+                <Label text="4735ce9132924caf8a5b17789b40f79c" textWrap="true" class="info_value" col="1" row="0" backgroundColor="blue" />
+                <Label text="Platform" col="0" row="1" class="info_label" backgroundColor="green" />
+                <Label text="PC, Xbox, PS4, NSwitch" col="1" row="1" class="info_value" backgroundColor="yellow" />
+            </GridLayout>
+
+            <GridLayout columns="120, *" rows="auto, auto" backgroundColor="lightgray">
+                <Label text="Epic ID" textWrap="true" class="info_label" col="0" row="0" backgroundColor="red" />
+                <Label text="4735ce9132924caf8a5b17789b40f79c" textWrap="true" class="info_value" col="1" row="0" backgroundColor="blue" />
+                <Label text="Platform" col="0" row="1" class="info_label" backgroundColor="green" />
+                <Label text="PC, Xbox, PS4, NSwitch" col="1" row="1" class="info_value" backgroundColor="yellow" />
+            </GridLayout>
+
+            <GridLayout columns="auto,*,auto,*,auto,*" rows="*">
+                <Label text="Kills" class="info_label" col="0" row="0" />
+                <Label text="98680" class="info_value" col="1" row="0" textWrap="true" />
+                <Label text="Wins" class="info_label" col="2" row="0" textWrap="true" />
+                <Label text="98680" class="info_value" col="3" row="0" textWrap="true" />
+                <Label text="KD" class="info_label" col="4" row="0" textWrap="true" />
+                <Label text="98680" class="info_value" col="5" row="0" textWrap="true" />
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
 </Page>

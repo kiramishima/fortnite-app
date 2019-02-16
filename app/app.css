@@ -39,6 +39,10 @@ StackLayout {
     margin-top: 100;
 }
 
+.stacklayout_stats_page {
+    margin-top: 0;
+}
+
 .stats_page_tomato {
     background-image: url("~/images/tomatohead.png");
     background-position: right bottom; /*Positioning*/
@@ -47,6 +51,29 @@ StackLayout {
 
 .stats_page_burguer {
     background-image: url("~/images/Boss_Burger.png");
-    background-position: right bottom; /*Positioning*/
+    background-position: left bottom; /*Positioning*/
     background-repeat: no-repeat; /*Prevent showing multiple background images*/
+}
+
+.user_name{
+    color: #000000;
+    font-size: 45;
+    font-weight	: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info_label {
+    color: #000000;
+    font-size: 25;
+    font-weight	: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info_value {
+    color: #863DFF;
+    font-size: 12;
+    font-weight: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    padding-top: 10;
 }
