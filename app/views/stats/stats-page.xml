@@ -41,6 +41,8 @@
                 <Label text="PC, Xbox, PS4, NSwitch" col="1" row="1" class="info_value" backgroundColor="yellow" />
             </GridLayout>
 
+            vs
+
             <GridLayout columns="auto,*,auto,*,auto,*" rows="*">
                 <Label text="Kills" class="info_label" col="0" row="0" />
                 <Label text="98680" class="info_value" col="1" row="0" textWrap="true" />
