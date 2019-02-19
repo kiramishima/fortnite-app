@@ -3,53 +3,37 @@
     xmlns="http://schemas.nativescript.org/tns.xsd">
     <ScrollView>
         <StackLayout class="stacklayout_stats_page">
-            <Label text="Ninja" class="user_name" textWrap="true" />
-            <GridLayout columns="120, *" rows="auto, auto" backgroundColor="lightgray">
-                <Label text="Epic ID" textWrap="true" class="info_label" col="0" row="0" backgroundColor="red" />
-                <Label text="4735ce9132924caf8a5b17789b40f79c" textWrap="true" class="info_value" col="1" row="0" backgroundColor="blue" />
-                <Label text="Platform" col="0" row="1" class="info_label" backgroundColor="green" />
-                <Label text="PC, Xbox, PS4, NSwitch" col="1" row="1" class="info_value" backgroundColor="yellow" />
+            <Label text="{{ userStats.username }}" class="user_name" textWrap="true" />
+            <GridLayout columns="120, *" rows="auto, auto" class="gridlayout_stats_page">
+                <Label text="Epic ID" textWrap="true" class="info_label" col="0" row="0" />
+                <Label text="{{ userStats.uid }}" textWrap="true" class="info_value" col="1" row="0" />
+                <Label text="Platform" col="0" row="1" class="info_label" />
+                <Label text="{{ userStats.platform }}" col="1" row="1" class="info_value" />
             </GridLayout>
 
             <GridLayout columns="auto,*,auto,*,auto,*" rows="*">
                 <Label text="Kills" class="info_label" col="0" row="0" />
-                <Label text="98680" class="info_value" col="1" row="0" textWrap="true" />
-                <Label text="Wins" class="info_label" col="2" row="0" textWrap="true" />
-                <Label text="98680" class="info_value" col="3" row="0" textWrap="true" />
+                <Label text="{{ userStats.totals.kills }}" class="info_value2" col="1" row="0" />
+                <Label text="Wins" class="info_label" col="2" row="0" />
+                <Label text="{{ userStats.totals.wins }}" class="info_value2" col="3" row="0" />
                 <Label text="KD" class="info_label" col="4" row="0" textWrap="true" />
-                <Label text="98680" class="info_value" col="5" row="0" textWrap="true" />
+                <Label text="{{ userStats.totals.kd }}" class="info_value2" col="5" row="0" />
             </GridLayout>
 
-            <GridLayout columns="120, *" rows="auto, auto" backgroundColor="lightgray">
-                <Label text="Epic ID" textWrap="true" class="info_label" col="0" row="0" backgroundColor="red" />
-                <Label text="4735ce9132924caf8a5b17789b40f79c" textWrap="true" class="info_value" col="1" row="0" backgroundColor="blue" />
-                <Label text="Platform" col="0" row="1" class="info_label" backgroundColor="green" />
-                <Label text="PC, Xbox, PS4, NSwitch" col="1" row="1" class="info_value" backgroundColor="yellow" />
+            <GridLayout columns="auto, *" rows="auto, auto, auto">
+                <Label text="Matches Played" class="info_label" col="0" row="0" />
+                <Label text="{{ userStats.totals.matchesplayed }}" class="info_value" col="1" row="0" />
+                <Label text="Minutes Played" col="0" row="1" class="info_label" />
+                <Label text="{{ userStats.totals.minutesplayed }}" col="1" row="1" class="info_value" />
+                <Label text="Hours Played" class="info_label" col="0" row="2" />
+                <Label text="{{ userStats.totals.hoursplayed }}" class="info_value" col="1" row="2" />
             </GridLayout>
-
-            <GridLayout columns="120, *" rows="auto, auto" backgroundColor="lightgray">
-                <Label text="Epic ID" textWrap="true" class="info_label" col="0" row="0" backgroundColor="red" />
-                <Label text="4735ce9132924caf8a5b17789b40f79c" textWrap="true" class="info_value" col="1" row="0" backgroundColor="blue" />
-                <Label text="Platform" col="0" row="1" class="info_label" backgroundColor="green" />
-                <Label text="PC, Xbox, PS4, NSwitch" col="1" row="1" class="info_value" backgroundColor="yellow" />
-            </GridLayout>
-
-            <GridLayout columns="120, *" rows="auto, auto" backgroundColor="lightgray">
-                <Label text="Epic ID" textWrap="true" class="info_label" col="0" row="0" backgroundColor="red" />
-                <Label text="4735ce9132924caf8a5b17789b40f79c" textWrap="true" class="info_value" col="1" row="0" backgroundColor="blue" />
-                <Label text="Platform" col="0" row="1" class="info_label" backgroundColor="green" />
-                <Label text="PC, Xbox, PS4, NSwitch" col="1" row="1" class="info_value" backgroundColor="yellow" />
-            </GridLayout>
-
-            vs
 
             <GridLayout columns="auto,*,auto,*,auto,*" rows="*">
-                <Label text="Kills" class="info_label" col="0" row="0" />
-                <Label text="98680" class="info_value" col="1" row="0" textWrap="true" />
-                <Label text="Wins" class="info_label" col="2" row="0" textWrap="true" />
-                <Label text="98680" class="info_value" col="3" row="0" textWrap="true" />
-                <Label text="KD" class="info_label" col="4" row="0" textWrap="true" />
-                <Label text="98680" class="info_value" col="5" row="0" textWrap="true" />
+                <Label text="Score" class="info_label" col="0" row="0" />
+                <Label text="{{ userStats.totals.score }}" class="info_value2" col="1" row="0" />
+                <Label text="Win Rate" class="info_label" col="2" row="0" />
+                <Label text="{{ userStats.totals.winrate }}" class="info_value2" col="3" row="0"/>
             </GridLayout>
         </StackLayout>
     </ScrollView>

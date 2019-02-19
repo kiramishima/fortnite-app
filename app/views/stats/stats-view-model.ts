@@ -1,8 +1,10 @@
 import { Observable } from "tns-core-modules/data/observable";
+import { IStatResults } from "~/interfaces/IStatsResults";
 
 export class StatsViewModel extends Observable {
     private _player: string;
     private _bgclass: string;
+    private _userStats: IStatResults;
     private _classes = ["stats_page_tomato", "stats_page_burguer"];
     constructor(player: string) {
         super();
@@ -21,16 +23,30 @@ export class StatsViewModel extends Observable {
     set bgclass(value: string) {
         if (this._bgclass != value) {
             this._bgclass = value;
-            this.notifyPropertyChange("txtSearch", value);
+            this.notifyPropertyChange("bgclass", value);
         }
 
     }
-    getUserStats() {
-        fetch(`https://fortnite-public-api.theapinetwork.com/prod09/users/public/br_stats_v2?user_id=${this._player}&platform=pc`)
+
+    get userStats(): IStatResults {
+        return this._userStats;
+    }
+
+    set userStats(value: IStatResults) {
+        if (this._userStats != value) {
+            this._userStats = value;
+            this.notifyPropertyChange("userStats", value);
+        }
+
+    }
+
+    async getUserStats() {
+        let response: IStatResults = await fetch(`https://fortnite-public-api.theapinetwork.com/prod09/users/public/br_stats?user_id=${this._player}&platform=pc&window=current`)
         .then((response) => response.json())
-        .then((r) => {
-            console.log({r});
-        }).catch((err) => {
+        .catch((err) => {
+            console.log({err})
+            return {};
         });
+        this._userStats = response;
     }
 }

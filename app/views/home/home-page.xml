@@ -3,6 +3,7 @@
     xmlns="http://schemas.nativescript.org/tns.xsd">
     
     <ActionBar class="action-bar">
+        <NavigationButton visibility="collapse"/>
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 

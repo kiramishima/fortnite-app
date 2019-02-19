@@ -24,7 +24,7 @@ export class HomeViewModel extends Observable {
         }, 1500);
     }
 
-    async getUser() {
+    private async getUser() {
         let response = await fetch(`https://fortnite-public-api.theapinetwork.com/prod09/users/id?username=${this._txtSearch}`).then((response) => response.json());
         console.log({response});
         return response["uid"];
